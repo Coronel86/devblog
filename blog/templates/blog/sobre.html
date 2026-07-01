@@ -1,14 +1,47 @@
 {% extends 'blog/base.html' %}
+{% load static %} {% block content %}
+<div class="about-container my-5">
+    
+    <div class="row text-center mb-5">
+        <div class="col-md-12">
+            <h2 class="display-4 font-weight-bold text-primary">Sobre o Projeto</h2>
+            <p class="lead text-muted">Conheça a história e o desenvolvimento deste site.</p>
+            <hr class="w-25 mx-auto">
+        </div>
+    </div>
 
-{% block content %}
+    <div class="row justify-content-center align-items-center mb-5">
+        
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="{% static 'blog/images/logo.png' %}" class="img-fluid rounded shadow">
+        </div>
 
-    <h2>Sobre</h2>
-    <p>
-        Este projeto foi criado como pratica das aulas da Trilha de Python do Senac Tech.
-    </p>
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4 bg-white rounded">
+                <h3 class="h4 mb-3 text-secondary">A Jornada no Senac Tech</h3>
+                <p>
+                    Este projeto foi desenvolvido como parte prática das aulas da <strong>Trilha de Python</strong> no <strong>Senac Tech</strong>. 
+                    Mais do que um simples site, ele representa a aplicação real dos conceitos estudados em sala de aula.
+                </p>
+                <p>
+                    O desenvolvimento foi realizado de forma colaborativa com a turma, avançando passo a passo e seguindo os exemplos de cada módulo. 
+                    A evolução do código foi contínua, transformando teorias de lógica e web design em uma aplicação funcional.
+                </p>
+            </div>
+        </div>
+    </div>
 
-    <p>
-        Projeto desenvolvido em conjunto com a turma, seguindo os exemplos de cada slide, com evolução continua.
-    </p>
+    <div class="row justify-content-center text-center mt-5">
+        <div class="col-md-8">
+            <h4 class="mb-3 text-muted">Tecnologias Utilizadas</h4>
+            <div class="d-flex justify-content-center gap-3 concept-tags flex-wrap">
+                <span class="badge bg-dark p-2 m-1">Python</span>
+                <span class="badge bg-success p-2 m-1">Django</span>
+                <span class="badge bg-info text-dark p-2 m-1">HTML5 / CSS3</span>
+                <span class="badge bg-primary p-2 m-1">SQLite / Banco de Dados</span>
+            </div>
+        </div>
+    </div>
 
+</div>
 {% endblock %}
