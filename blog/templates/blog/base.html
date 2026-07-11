@@ -17,6 +17,13 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'home' %}">🚀 DevBlog</a>
                 <div class="collapse navbar-collapse">
+
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'home' %}">Inicio</a>
@@ -42,6 +49,13 @@
                         </li>
 
                     </ul>
+
+                    <form class="d-flex ms-lg-3 mt-3 mt-lg-0" action="{% url 'home' %}" method="GET">
+                        
+                        <input class="form-control me-2" type="search" name="q" placeholder="Buscar artigos..." aria-label="Search" value="{{ busca|default_if_none:'' }}">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+
                 </div>
             </div>
         </nav>
